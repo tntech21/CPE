@@ -4,7 +4,6 @@
 int main() // Must be included in every C file
 {
 	double A = 1;
-	double A = 2
 	double out = 0;
 	const double Ts = 0.01;
 
