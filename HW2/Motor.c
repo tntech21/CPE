@@ -1,12 +1,12 @@
-#include <stdio.h>
-#include <math.h>
+#include <stdio.h> // C header
+#include <math.h> // Math header
 
-double motor(double A, double c, double t)
+double motor(double A, double c, double t) // Motor function being called
 {
-	return A * (1 - exp(c * t));
+	return A * (1 - exp(c * t)); // math formula being defined with formal variables
 }
 
-int main()
+int main() // Execute program beyond this point
 {
 	FILE* f = fopen("motor.csv", "wt");
 	double ts = 0.1;
