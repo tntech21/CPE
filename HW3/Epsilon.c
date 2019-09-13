@@ -1,30 +1,24 @@
-#include <stdio.h>
-#include <stdlib.h>
-// Function to return the absolute value of a number
-double absoluteVal(double x)
-{
-  if (x < 0)
-  x = -x;
-  return x;
-}
-// Function to return square root of a number. Uses Newton-Raphson method.
-double squareRoot(double x)
-{
-  const double epsilon =  0.000001; // Value change from 0.01 to  0.000001
-  double guess = 1.0;
+#include <stdio.h> // C Header
+#include <stdlib.h> // Memory-proccess control Header
+// #pragma warning (disable:4996)
 
-  while (absoluteVal(guess * guess - x) >= epsilon)
+int triangleNumber(int n) // Fundction defined
+{
+    int tri = 0;
+    for (int i = 1; i <= n; i++)
+        tri += i;
 
-  guess = (x / guess + guess) / 2.0;
-  return guess;
+    return tri;
 }
+
 int main(void)
 {
-  printf("The square root of 2.0 is %f\n", squareRoot(2.0));
+    int val1 = 6;
+    int val2 = 12;
+    printf("The triangle number for %i is %d\n", val1, triangleNumber(val1));
 
-  printf("The square root of 2.0 is %f\n", squareRoot(144.0));
+    printf("The triangle number for %i is %d\n", val2, triangleNumber(val2));
 
-  printf("The square root of 2.0 is %f\n", squareRoot(17.5));
-  system("pause");
-return 0;
+    system("pause");
+    return 0;
 }
