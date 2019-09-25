@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#pragma warning (disable:4996)
+
+int main()
+{
+	int avg = 0;
+	int sum = 0;
+	int x = 0;
+
+	int num[10];
+
+	for (x = 0; x < 10; x++)
+	{
+		printf("Enter number %d \n", (x + 1));
+		scanf("%d", &num[x]);
+	}
+
+	for (x = 0; x < 10; x++)
+	{
+		sum = sum + num[x];
+	}
+
+	avg = sum / 10;
+	printf("Average of the entered values is: %d", avg);
+  system("pause")
+	return 0;
+}
